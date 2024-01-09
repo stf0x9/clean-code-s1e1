@@ -1,19 +1,81 @@
+<!DOCTYPE html>
 <html>
-<HEAD><title>Todo App</title>
-<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="style.css" type="text/css" MEDIA="screen" charset="utf-8">
-</HEAD>
-<body>
-<div class="aaa"><img src="./eisenhower-matrix.jpg"><a class='more_inf' href="https://goal-life.com/page/method/matrix-eisenhower">Want more details&quest;</a></div>
-<div class="centered-main-page-element"><p id='topSectionForAddingElementToList'><label for="new-task">Add Item</label><div class="task-row-wrapper"><input id='new-task'class="task" type="text"><button>Add</button></div>
-</p><h3>Todo</h3>
-<ul id='incompleteTasks'>
-<li><input type='checkbox'><label class="task">Pay Bills</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button></li>
-<li class="editMode"><input type="checkbox"><label class="task">Go Shopping</label><input type="text" value="Go Shopping" class="task"><button class='edit'>Save</button><button class="delete"><img src="./remove.svg"></button></li>
-</ul><h3>Completed</h3><ul id="completed-tasks"><li><input type="checkbox" checked><label class="task">See the Doctor</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button>
-</li>
-</ul>
-</div>
-<script type="text/javascript" SRC="app.js"></script>
-</body>
+  <head>
+    <title>Todo App</title>
+    <link 
+    href="https://fonts.googleapis.com/css?family=Lato:300,400,700" 
+    rel="stylesheet"
+    >
+    <link 
+    rel="stylesheet" 
+    href="style.css" 
+    media="screen" 
+    charset="utf-8"
+    >
+  </head>
+  <body class="app">
+    <section class="app__description">
+      <img 
+      class="description__image"
+      src="./eisenhower-matrix.jpg"
+      alt="Eisenhower-matrix: Do important & urgent. Plan important & not urgent. Delegate not important & urgent. Eliminate not important & not urgent">
+      <a 
+      class="description__link" 
+      href="https://goal-life.com/page/method/matrix-eisenhower"
+      >Want more details?</a>
+    </section>
+    <section class="app__organizer">
+      <div class="organizer__add-task">
+        <label for="add-task__title" class="add-task__title title">Add Item</label>
+        <div class="add-task__panel">
+          <input 
+          class="add-task__input task__input input_text input" 
+          id="add-task__title"
+          type="text"
+          >
+          <button class="btn add-task__btn">Add</button>
+        </div>
+      </div>
+      <div class="organizer__schedule">
+        <div class="schedule__postponed">
+          <h3 class="schedule__postponed_title title">Todo</h3>
+          <ul class="postponed__list list">
+            <li class="list__item">
+              <input type="checkbox" class="input input_checkbox">
+              <label class="task__label">Pay Bills</label>
+              <input type="text" class="edit__input input_text input">
+              <button class="edit btn btn_edit">Edit</button>
+              <button class="delete btn btn_delete">
+                <img src="./remove.svg" alt="remove" class="delete__img">
+              </button>
+            </li>
+            <li class="editMode list__item">
+              <input type="checkbox" class="input input_checkbox">
+              <label class="task__label">Go Shopping</label>
+              <input type="text" value="Go Shopping" class="edit__input input_text input">
+              <button class="edit btn btn_edit">Save</button>
+              <button class="delete btn btn_delete">
+                <img src="./remove.svg" alt="remove" class="delete__img">
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="schedule__completed">
+          <h3 class="schedule__completed_title title">Completed</h3>
+          <ul class="completed__list list">
+            <li class="list__item">
+              <input type="checkbox" checked class="input input_checkbox">
+              <label class="task__label">See the Doctor</label>
+              <input type="text" class="edit__input input_text input">
+              <button class="edit btn btn_edit">Edit</button>
+              <button class="delete btn btn_delete">
+                <img src="./remove.svg" alt="remove" class="delete__img">
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
 </html>
